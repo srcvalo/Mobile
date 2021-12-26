@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_export.xml" value="0.39215686274509803" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_fillup.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_fillupmain.xml" value="0.2745644599303136" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_loginwin.xml" value="0.25" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_registerwin.xml" value="0.1689497716894977" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_subject.xml" value="0.1875" />
+        <entry key="..\:/Users/Nicole D. Lopez/AndroidStudioProjects/Mobile/app/src/main/res/layout/activity_verif.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
