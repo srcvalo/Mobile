@@ -34,7 +34,7 @@
                     app:srcCompat="@drawable/official_seal_of_batangas_state_university" />
 
                 <EditText
-                    android:id="@+id/fullname"
+                    android:id="@+id/FULLNAME"
                     android:layout_width="301dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -43,7 +43,7 @@
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/EMAIL"
                     android:layout_width="301dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -52,7 +52,7 @@
                     android:inputType="textEmailAddress" />
 
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/PASSWORD"
                     android:layout_width="301dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -302,7 +302,7 @@
                     android:inputType="text|phone" />
 
                 <Button
-                    android:id="@+id/fillsubmit"
+                    android:id="@+id/btnsignup"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

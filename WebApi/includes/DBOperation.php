@@ -12,16 +12,16 @@ class DBOperation
     }
 
     //adding acc to database
-    public function addUserAcc($fullname, $email, $password)
+    public function addUserAcc($FULLNAME, $EMAIL, $PASSWORD)
     {
         $check = 'a';
-        $stmt = $this->con->prepare("INSERT INTO users(fullname, email, password) Values(?, ?, ?)");
-        $stmt->bind_param("sss", $fullname, $email, $password);
-        $chkEmail="SELECT * FROM users WHERE  email='$email'";
+        $stmt = $this->con->prepare("INSERT INTO users(FULLNAME, EMAIL, PASSWORD) Values(?, ?, ?)");
+        $stmt->bind_param("sss", $FULLNAME, $EMAIL, $PASSWORD);
+        $chkEmail="SELECT * FROM users WHERE  email='$EMAIL'";
         $res=mysqli_query($this->con,$chkEmail);
         $row = mysqli_fetch_assoc($res);
         
-        if($email==$row['email'])
+        if($EMAIL==$row['EMAIL'])
         {
             $check = 'b';
         }
@@ -34,24 +34,24 @@ class DBOperation
 
     public function getUserAcc()
     {
-       $stmt = $this->con->prepare("SELECT id,email, password  FROM users");
+       $stmt = $this->con->prepare("SELECT id,EMAIL, PASSWORD  FROM users");
         $stmt->execute();
-        $stmt->bind_result($id,$email, $password);
+        $stmt->bind_result($id,$EMAIL, $PASSWORD);
         $users = array();
 
         while($stmt->fetch())
         {
             $temp = array();
             $temp ['id'] = $id;
-            $temp['email'] = $email;
-            $temp['password'] = $password;
+            $temp['EMAIL'] = $EMAIL;
+            $temp['PASSWORD'] = $PASSWORD;
             array_push($users, $temp); 
         }  
         return $users;
     }
-    public function usersLogin($email, $password)
+    public function usersLogin($EMAIL, $PASSWORD)
     {
-        $stmt = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $stmt = "SELECT * FROM users WHERE EMAIL = '$EMAIL' AND PASSWORD = '$PASSWORD'";
         $result = mysqli_query($this->con,$stmt); 
 
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  

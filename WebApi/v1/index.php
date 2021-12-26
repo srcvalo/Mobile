@@ -9,15 +9,15 @@ if(isset($_GET['op']))
     switch($_GET['op'])
     {
         case 'addUsers':
-            if(!empty($_POST['fullname'])&& !empty($_POST['email']) && !empty($_POST['password']))
+            if(!empty($_POST['FULLNAME'])&& !empty($_POST['EMAIL']) && !empty($_POST['PASSWORD']))
             {
                 $db = new DBOperation();
-                if($db->addUserAcc($_POST['fullname'],$_POST['email'], $_POST['password'])=='c')
+                if($db->addUserAcc($_POST['FULLNAME'],$_POST['EMAIL'], $_POST['PASSWORD'])=='c')
                 {
                     $response['error'] = false;
                     $response['message'] = 'Sign Up successful';
                 }
-                else if($db->addUserAcc($_POST['fullname'], $_POST['email'], $_POST['password'])=='b')
+                else if($db->addUserAcc($_POST['FULLNAME'], $_POST['EMAIL'], $_POST['PASSWORD'])=='b')
                 {
                     $response['error'] = true;
                     $response['message'] = 'The Email is already taken';
@@ -50,10 +50,10 @@ if(isset($_GET['op']))
         break;
         
         case 'loginuser':
-            if(!empty($_POST['email']) && !empty($_POST['passwords']))
+            if(!empty($_POST['EMAIL']) && !empty($_POST['PASSWORD']))
             {
                 $db = new DBOperation();
-                if($db->usersLogin($_POST['email'], $_POST['passwords']))
+                if($db->usersLogin($_POST['EMAIL'], $_POST['PASSWORD']))
                 {
                     $response['error'] = false;
                     $response['message'] = 'Logged in Succesfully';

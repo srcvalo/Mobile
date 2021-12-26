@@ -17,9 +17,9 @@ import org.json.JSONObject
 
 class fillupmain : AppCompatActivity() {
 
-    private var editTextfullname: EditText? = null
-    private var editTextemail: EditText? = null
-    private var editTextpassword: EditText? = null
+    private var editTextFULLNAME: EditText? = null
+    private var editTextEMAIL: EditText? = null
+    private var editTextPASSWORD: EditText? = null
     private var editTextaddress: EditText? = null
     private var editTextsrcode: EditText? = null
     private var editTextcontact: EditText? = null
@@ -32,26 +32,18 @@ class fillupmain : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fillupmain)
 
-        val btnsignup = findViewById<Button>(R.id.fillsubmit)
+        val btnsignup = findViewById<Button>(R.id.btnsignup)
 
         btnsignup.setOnClickListener {
-            editTextfullname = findViewById<TextView>(R.id.fullname) as EditText?
-            editTextemail = findViewById<TextView>(R.id.email) as EditText?
-            editTextpassword = findViewById<TextView>(R.id.password) as EditText?
-            editTextaddress = findViewById<TextView>(R.id.address) as EditText?
-            editTextsrcode = findViewById<TextView>(R.id.srcode) as EditText?
-            editTextcontact = findViewById<TextView>(R.id.contact) as EditText?
-            editTextguardianname = findViewById<TextView>(R.id.guardianname) as EditText?
-            editTextguardiancontact =findViewById<TextView>(R.id.guardiancontact) as EditText?
+            editTextFULLNAME = findViewById<TextView>(R.id.FULLNAME) as EditText?
+            editTextEMAIL = findViewById<TextView>(R.id.EMAIL) as EditText?
+            editTextPASSWORD = findViewById<TextView>(R.id.PASSWORD) as EditText?
 
-            val fullname = editTextfullname?.text.toString()
-            val email = editTextemail?.text.toString()
-            val password = editTextpassword?.text.toString()
-            val address = editTextaddress?.text.toString()
-            val srcode = editTextsrcode?.text.toString()
-            val contact = editTextcontact?.text.toString()
-            val guardianname = editTextguardianname?.text.toString()
-            val guardiancontact = editTextguardiancontact?.text.toString()
+
+            val FULLNAME = editTextFULLNAME?.text.toString()
+            val EMAIL = editTextEMAIL?.text.toString()
+            val PASSWORD = editTextPASSWORD?.text.toString()
+
            /* Toast.makeText(
                 applicationContext,
                 "$fullname\n$email\n$password",
@@ -78,9 +70,9 @@ class fillupmain : AppCompatActivity() {
                 @Throws(AuthFailureError::class)
                 override fun getParams(): Map<String, String> {
                     val params = HashMap<String, String>()
-                    params["fullname"] = fullname
-                    params["email"] = email
-                    params["password"] = password
+                    params["FULLNAME"] = FULLNAME
+                    params["EMAIL"] = EMAIL
+                    params["PASSWORD"] = PASSWORD
                     return params
                 }
             }
