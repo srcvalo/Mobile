@@ -14,25 +14,25 @@ import org.json.JSONObject
 
 class loginwin() : AppCompatActivity() {
 
-    private var editTextemail: EditText? = null
-    private var editTextpassword: EditText? = null
+    private var editTextEMAIL: EditText? = null
+    private var editTextPASSWORD: EditText? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loginwin)
 
-        editTextemail = findViewById<EditText>(R.id.email)
-        editTextpassword = findViewById<EditText>(R.id.password)
+        editTextEMAIL = findViewById<EditText>(R.id.EMAIL)
+        editTextPASSWORD = findViewById<EditText>(R.id.PASSWORD)
         val login = findViewById<Button>(R.id.loginwinbot)
-        val email = findViewById<EditText>(R.id.email)
-        var password = findViewById<EditText>(R.id.password)
+        val EMAIL = findViewById<EditText>(R.id.EMAIL)
+        var PASSWORD = findViewById<EditText>(R.id.PASSWORD)
 
 
         login.setOnClickListener {
-            if (email.text.isNullOrBlank() && password.text.isNullOrBlank()) {
+            if (EMAIL.text.isNullOrBlank() && PASSWORD.text.isNullOrBlank()) {
                 Toast.makeText(this, "Please fill the required fields!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "${email.text} is logged in!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "${EMAIL.text} is logged in!", Toast.LENGTH_SHORT).show()
                 val stringRequest =
                     object : StringRequest(
                         Request.Method.POST, EndPoints.URL_LOGIN_USER,
@@ -58,8 +58,8 @@ class loginwin() : AppCompatActivity() {
                         @Throws(AuthFailureError::class)
                         override fun getParams(): Map<String, String> {
                             val params = HashMap<String, String>()
-                            params["email"] = email.toString()
-                            params["password"] = password.toString()
+                            params["EMAIL"] = EMAIL.toString()
+                            params["PASSWORD"] = PASSWORD.toString()
                             return params
                         }
                     }
@@ -70,11 +70,9 @@ class loginwin() : AppCompatActivity() {
         }
     }
 
-    /*private fun loginuser() {
-        var email = editTextemail?.getText().toString()
-        var password = editTextpassword?.getText().toString()
-        var email = editTextemail?.getText().toString()
-        var password = editTextpassword?.getText().toString()
+    private fun loginuser() {
+        var EMAIL = editTextEMAIL?.getText().toString()
+        var PASSWORD = editTextPASSWORD?.getText().toString()
             val stringRequest =
                 object : StringRequest(
                     Request.Method.POST, EndPoints.URL_LOGIN_USER,
@@ -100,14 +98,12 @@ class loginwin() : AppCompatActivity() {
                     @Throws(AuthFailureError::class)
                     override fun getParams(): Map<String, String> {
                         val params = HashMap<String, String>()
-                        params["email"] = email
-                        params["password"] = password
+                        params["EMAIL"] = EMAIL
+                        params["PASSWORD"] = PASSWORD
                         return params
                     }
                 }
             VolleySingleton.instance?.addToRequestQueue(stringRequest)
         }
 
-    }*/
-
-}
+    }
