@@ -1,5 +1,6 @@
 package com.example.mobile
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -64,8 +65,7 @@ class loginwin() : AppCompatActivity() {
                         }
                     }
                 VolleySingleton.instance?.addToRequestQueue(stringRequest)
-                /*loginuser()
-                startActivity(Intent(this, Export::class.java))*/
+                startActivity(Intent(this, Export::class.java))
             }
         }
     }
