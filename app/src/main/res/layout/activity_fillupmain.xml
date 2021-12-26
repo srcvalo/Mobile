@@ -173,14 +173,15 @@
                     android:textStyle="bold" />
 
 
-                <EditText
+                <TextView
                     android:id="@+id/mobile"
-                    android:layout_width="131dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="-85dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginStart="40dp"
                     android:hint="Mobile Phone"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
                     android:inputType="textPostalAddress" />
 
                 <Spinner
@@ -193,14 +194,15 @@
                     android:entries="@array/qmobile"
                     app:layout_constraintLeft_toRightOf="@id/mobile" />
 
-                <EditText
+                <TextView
                     android:id="@+id/tablet"
-                    android:layout_width="101dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="-100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginStart="40dp"
                     android:hint="Tablet"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
                     android:inputType="textPostalAddress" />
 
                 <Spinner
@@ -215,12 +217,13 @@
 
                 <EditText
                     android:id="@+id/laptop"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="-100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="10dp"
                     android:hint="Laptop"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
                     android:inputType="textPostalAddress" />
 
                 <Spinner
@@ -235,12 +238,13 @@
 
                 <EditText
                     android:id="@+id/desktop"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="-100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="10dp"
                     android:hint="Desktop"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
                     android:inputType="textPostalAddress" />
 
                 <Spinner
@@ -255,17 +259,18 @@
 
                 <EditText
                     android:id="@+id/internet"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="-100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="10dp"
                     android:hint="Internet"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
                     android:inputType="textPostalAddress" />
 
                 <Spinner
                     android:id="@+id/cinternet"
-                    android:layout_width="172dp"
+                    android:layout_width="117dp"
                     android:layout_height="41dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="65dp"
